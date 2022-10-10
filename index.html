@@ -6,9 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/crossFavicon.png">
 </head>
 <body>
-    
+    <div class="wrapper relative">
+        <div id="line-1" class="horizontal-line absolute" style="top: 139px;"></div>
+        <div id="line-2" class="horizontal-line absolute" style="top: 275px;"></div>
+        <div id="line-3" class="horizontal-line absolute" style="top: 409px;"></div>
+        <div id="line-4" class="horizontal-line vertical-line absolute" style="left: -35px;"></div>
+        <div id="line-5" class="horizontal-line vertical-line absolute" style="left: 101px;"></div>
+        <div id="line-6" class="horizontal-line vertical-line absolute" style="left: 234px;"></div>
+        <div id="line-7" class="horizontal-line diagonal-line-right absolute" style="top: 274px; transform: rotate(-45deg) scaleX(0.0);"></div>
+        <div id="line-8" class="horizontal-line diagonal-line-left absolute" style="top: 274px; transform: rotate(45deg) scale(0.0);"></div>
+        <div class="player-panel flex">
+            <div id="player-circle" class="player">Player 1 <img src="img/circle.png"></div>
+            <div id="player-cross" class="player player-inactive">Player 2 <img src="img/cross.png"></div>
+        </div>
+    <table>
+        <tr>
+            <td onclick="select(0)">
+                <img id="circle-0" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-0" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(1)">
+                <img id="circle-1" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-1" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(2)">
+                <img id="circle-2" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-2" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+        </tr>
+        <tr>
+            <td onclick="select(3)">
+                <img id="circle-3" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-3" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(4)">
+                <img id="circle-4" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-4" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(5)">
+                <img id="circle-5" class="fieldimage absolute d-none"  src="img/circle.png">
+                <img id="cross-5" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+        </tr>
+        <tr>
+            <td onclick="select(6)">
+                <img id="circle-6" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-6" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(7)">
+                <img id="circle-7" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-7" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+            <td onclick="select(8)">
+                <img id="circle-8" class="fieldimage absolute d-none" src="img/circle.png">
+                <img id="cross-8" class="fieldimage absolute d-none" src="img/cross.png">
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
