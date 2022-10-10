@@ -56,6 +56,7 @@ function checkForWin() {
     renderHorizontalLines();
     renderVerticalLines();
     renderDiagonalLines();
+    fullField();
 }
 
 
@@ -98,6 +99,13 @@ function renderDiagonalLines() {
     }
     else if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
         document.getElementById('line-8').style.transform = 'rotate(45deg) scaleX(1.2)';
+        gameOver = true;
+    }
+}
+
+
+function fullField() {
+    if(fields[0]&&fields[1]&&fields[2]&&fields[3]&&fields[4]&&fields[5]&&fields[6]&&fields[7]&&fields[8]) {
         gameOver = true;
     }
 }
