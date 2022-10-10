@@ -8,6 +8,10 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    padding: 0;
+}
+
 
 .flex {
     display: flex;
@@ -41,14 +45,21 @@ html {
     position: absolute;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.wrapper {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
-.wrapper {
+.container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
     padding: 80px 80px 20px;
     border: 1px solid black;
 }
@@ -129,7 +140,7 @@ td:hover {
     z-index: 1;
     left: 98px;
     transform: scaleX(0.0);
-    transition: transform 300ms ease-in-out
+    transition: transform 225ms ease-in-out
 }
 
 .vertical-line {
@@ -140,4 +151,57 @@ td:hover {
 .diagonal-line-right {
     top: 276px;
     left: 99px;
+}
+
+.game-over {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 225ms ease-in-out;
+    transition: opacity 225ms ease-in-out;
+}   
+
+.restart-btn {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(6, 6, 85);
+    color: white;
+    font-size: 20px;
+    width: 300px;
+    height: 100px;
+    z-index: 2;
+    transform: translateY(-550px) translateX(-33rem);
+    transition: transform 2s ease-in-out;
+}
+
+.restart-btn:hover {
+    background-color: rgb(32, 32, 155);
+}
+
+
+@media screen and (max-width: 760px) {
+    .player {
+        font-size: 16px;
+    }
+    .player img {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    td {
+        height: 70px;
+    }
+
+    .fieldimage {
+        top: 10px;
+        left: 7px;
+        width: 49px;
+        height: 49px;
+    }
+
+    .player img {
+        margin-right: 13px;
+        margin-left: 7px;
+    }
 }
