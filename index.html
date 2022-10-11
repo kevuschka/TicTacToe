@@ -15,15 +15,17 @@
             <img id="game-over" class="game-over absolute" style="transform: scaleX(0.0); opacity: 0.0;" src="img/game-over.png">
             <button id="restart-btn" class="restart-btn absolute cursor-p" onclick="restart()">Restart</button>
             <div class="table-container relative">
-                <div id="line-1" class="horizontal-line absolute" style="top: 139px;"></div>
-                <div id="line-2" class="horizontal-line absolute" style="top: 275px;"></div>
-                <div id="line-3" class="horizontal-line absolute" style="top: 409px;"></div>
-                <div id="line-4" class="horizontal-line vertical-line absolute" style="left: -35px;"></div>
-                <div id="line-5" class="horizontal-line vertical-line absolute" style="left: 101px;"></div>
-                <div id="line-6" class="horizontal-line vertical-line absolute" style="left: 234px;"></div>
-                <div id="line-7" class="horizontal-line diagonal-line-right absolute" style="top: 274px; transform: rotate(-45deg) scaleX(0.0);"></div>
-                <div id="line-8" class="horizontal-line diagonal-line-left absolute" style="top: 274px; transform: rotate(45deg) scale(0.0);"></div>
-                <div class="player-panel flex">
+                <div class="lines" id="lines">
+                    <div id="line-1" class="horizontal-line line-1 absolute"></div>
+                    <div id="line-2" class="horizontal-line line-2 absolute"></div>
+                    <div id="line-3" class="horizontal-line line-3 absolute"></div>
+                    <div id="line-4" class="horizontal-line line-4 vertical-line absolute"></div>
+                    <div id="line-5" class="horizontal-line line-5 vertical-line absolute"></div>
+                    <div id="line-6" class="horizontal-line line-6 vertical-line absolute"></div>
+                    <div id="line-7" class="horizontal-line line-7 diagonal-line-right absolute"></div>
+                    <div id="line-8" class="horizontal-line line-8 diagonal-line-left absolute"></div>
+                </div>
+                <div class="player-panel absolute flex">
                     <div id="player-circle" class="player">Player 1 <img src="img/circle.png"></div>
                     <div id="player-cross" class="player player-inactive">Player 2 <img src="img/cross.png"></div>
                 </div>
@@ -76,3 +78,5 @@
     </div>
 </body>
 </html>
+
+

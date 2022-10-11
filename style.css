@@ -66,7 +66,6 @@ body {
 
 .player-panel {
     align-items: center;
-    position: absolute;
     top: 5px;
     left: 66px;
 }
@@ -133,9 +132,43 @@ td:hover {
     height: 80px;
 }
 
+.lines .line-1{
+    top: 139px;
+}
+
+.lines .line-2{
+    top: 275px;
+}
+
+.lines .line-3{
+    top: 409px;
+}
+
+.lines .line-4{
+    left: -35px;
+}
+
+.lines .line-5{
+    left: 101px;
+}
+
+.lines .line-6{
+    left: 234px;
+}
+
+.lines .line-7{
+    top: 274px; transform: rotate(-45deg) scaleX(0.0);
+}
+
+.lines .line-8{
+    top: 274px; transform: rotate(45deg) scale(0.0);
+}
+
 .horizontal-line {
-    width: 361px;
-    height: 10px;
+    max-width: 361px;
+    width: 100%;
+    height: 100%;
+    max-height: 10px;
     background-color: rgba(0,0,0,0.7);
     z-index: 1;
     left: 98px;
@@ -151,6 +184,22 @@ td:hover {
 .diagonal-line-right {
     top: 276px;
     left: 99px;
+}
+
+.show-horizontal-line {
+    transform: scaleX(1);
+}
+
+.show-vertical-line {
+    transform: rotate(90deg) scaleX(1);
+}
+
+.table-container .lines .show-diagonal-line-right {
+    transform: rotate(-45deg) scaleX(1);
+}
+
+.table-container .lines .show-diagonal-line-left {
+    transform: rotate(45deg) scaleX(1);
 }
 
 .game-over {
@@ -170,7 +219,7 @@ td:hover {
     width: 300px;
     height: 100px;
     z-index: 2;
-    transform: translateY(-550px) translateX(-33rem);
+    transform: translateY(-550px) translateX(0%);
     transition: transform 2s ease-in-out;
 }
 
@@ -178,18 +227,49 @@ td:hover {
     background-color: rgb(32, 32, 155);
 }
 
+.show-restart-btn {
+    transform: translateY(111%) translateX(0%);
+}
 
-@media screen and (max-width: 760px) {
-    .player {
-        font-size: 16px;
+@media screen and (max-width: 1000px) {
+    .game-over {
+        object-fit: contain;
     }
-    .player img {
-        width: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .container {
+        padding: 10px;
     }
 }
 
 @media screen and (max-width: 525px) {
+    .container {
+        align-items: flex-start;
+    }
+
+    .table-container {
+        padding: 80px 38px 20px;
+    }
+
+    .player-panel {
+        top: 23px;
+        left: 22px;
+    }
+
+    .player {
+        font-size: 16px;
+    }
+
+    .player img {
+        width: 30px;
+        margin-right: 13px;
+        margin-left: 7px;
+    }
+
     td {
+        width: 70px;
         height: 70px;
     }
 
@@ -200,8 +280,146 @@ td:hover {
         height: 49px;
     }
 
+    .lines .line-1{
+        top: 109px;
+    }
+    
+    .lines .line-2{
+        top: 182px;
+    }
+    
+    .lines .line-3{
+        top: 252px;
+    }
+    
+    .lines .line-4{
+        left: -30px;
+    }
+    
+    .lines .line-5{
+        left: 43px;
+    }
+    
+    .lines .line-6{
+        left: 112px;
+    }
+    
+    .lines .line-7{
+        top: 181px; 
+        transform: rotate(-45deg) scaleX(0.0);
+    }
+    
+    .lines .line-8{
+        top: 181px; 
+        transform: rotate(45deg) scale(0.0);
+    }
+
+    .horizontal-line {
+        max-width: 199px;
+        width: 100%;
+        left: 43px;
+    }
+    
+    .vertical-line {
+        top: 181px;
+    }
+    
+    .diagonal-line-right {
+        left: 44px;
+    }
+
+    .restart-btn {
+        height: 90px;
+    }
+
+    .show-restart-btn {
+        transform: translateY(629%) translateX(0%);
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .table-container {
+        padding: 50px 12px 12px;
+    }
+
+    .player-panel {
+        top: 16px;
+        left: 12px;
+    }
+
+    .player {
+        font-size: 12px;
+    }
+
     .player img {
-        margin-right: 13px;
-        margin-left: 7px;
+        width: 16px;
+    }
+
+    td {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fieldimage {
+        top: 5px;
+        left: 5px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .lines .line-1{
+        top: 68px;
+    }
+    
+    .lines .line-2{
+        top: 120px;
+    }
+    
+    .lines .line-3{
+        top: 170px;
+    }
+    
+    .lines .line-4{
+        left: -35px;
+    }
+    
+    .lines .line-5{
+        left: 17px;
+    }
+    
+    .lines .line-6{
+        left: 67px;
+    }
+    
+    .lines .line-7{
+        top: 121px; 
+        transform: rotate(-45deg) scaleX(0.0);
+    }
+    
+    .lines .line-8{
+        top: 121px; 
+        transform: rotate(45deg) scale(0.0);
+    }
+
+    .horizontal-line {
+        max-width: 140px;
+        left: 16px;
+    }
+    
+    .vertical-line {
+        top: 118px;
+    }
+    
+    .diagonal-line-right {
+        left: 15px;
+    }
+
+    .restart-btn {
+        width: 150px;
+        height: 50px;
+    }
+
+    .show-restart-btn {
+        transform: translateY(476%) translateX(0%);
     }
 }
