@@ -41,13 +41,8 @@ function currentPlayer(shape) {
 // ########## DRAW SHAPE ##########
 function draw() {
     for (let i = 0; i < 9; i++) {
-        if(fields[i] == 'cross') {
-            document.getElementById('cross-'+`${i}`).classList.remove('d-none');
-        }
-        else if(fields[i] == 'circle') {
-            document.getElementById('circle-'+`${i}`).classList.remove('d-none');
-        }
-        
+        if(fields[i] == 'cross') document.getElementById('cross-'+`${i}`).classList.remove('d-none');
+        else if (fields[i] == 'circle') document.getElementById('circle-'+`${i}`).classList.remove('d-none');
     }
 }
 
@@ -76,7 +71,6 @@ function renderLine1() {
 
 function renderLine2() {
     if (fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
-        // document.getElementById('line-2').style.transform = 'scaleX(1)';
         document.getElementById('line-2').classList.add('show-horizontal-line');
         gameOver = true;
     }
@@ -125,12 +119,10 @@ function renderLine6() {
 // ########## DIAGONAL LINES ##########
 function renderDiagonalLines() {
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
-        // document.getElementById('line-7').style.transform = 'rotate(-45deg) scaleX(1.2)';
         document.getElementById('line-7').classList.add('show-diagonal-line-right');
         gameOver = true;
     }
     else if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
-        // document.getElementById('line-8').style.transform = 'rotate(45deg) scaleX(1.2)';
         document.getElementById('line-8').classList.add('show-diagonal-line-left');
         gameOver = true;
     }
@@ -138,9 +130,7 @@ function renderDiagonalLines() {
 
 // ########## NO ONE WINS - FIELD FULL ##########
 function fullField() {
-    if(fields[0]&&fields[1]&&fields[2]&&fields[3]&&fields[4]&&fields[5]&&fields[6]&&fields[7]&&fields[8]) {
-        gameOver = true;
-    }
+    if(fields[0]&&fields[1]&&fields[2]&&fields[3]&&fields[4]&&fields[5]&&fields[6]&&fields[7]&&fields[8]) gameOver = true;
 }
 
 // ########## GAME OVER ##########
@@ -184,14 +174,9 @@ function cleanFields() {
 
 
 function cleanLines() {
-    for (let i = 1; i < 4; i++) {
-        // document.getElementById(`line-${i}`).style.transform = 'scaleX(0.0)';
-        document.getElementById(`line-${i}`).classList.remove('show-horizontal-line');
-    }
-    for (let i = 4; i < 7; i++) {
-        document.getElementById(`line-${i}`).classList.remove('show-vertical-line');
-    }
-    // document.getElementById(`line-7`).style.transform = 'rotate(-45deg) scaleX(0.0)';
+    for (let i = 1; i < 4; i++) document.getElementById(`line-${i}`).classList.remove('show-horizontal-line');
+    for (let i = 4; i < 7; i++)  document.getElementById(`line-${i}`).classList.remove('show-vertical-line');
+    
     document.getElementById(`line-7`).classList.remove('show-diagonal-line-right');
     document.getElementById(`line-8`).classList.remove('show-diagonal-line-left');
 }
